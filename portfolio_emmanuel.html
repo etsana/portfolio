@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Emmanuel Tsana | BTS SIO SISR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #1a1228;
+            --bg-section: #241e32;
+            --text-primary: #f0f0f0;
+            --text-secondary: #c0c0c0;
+            --accent-start: #9a86ff;
+            --accent-end: #7a5cff;
+            --accent-hover: #6a4cff;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--bg-section);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            background: linear-gradient(to right, var(--accent-start), var(--accent-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-start), var(--accent-end));
+            border-radius: var(--border-radius);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+        }
+
+        p, li {
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 300;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: all 0.3s;
+            font-weight: 500;
+            border: 1px solid var(--accent-end);
+        }
+
+        nav a:hover {
+            background: linear-gradient(to right, var(--accent-start), var(--accent-end));
+            color: var(--bg-dark);
+        }
+
+        section {
+            background-color: var(--bg-section);
+            padding: 3rem 0;
+            margin: 1rem 0;
+            border-radius: var(--border-radius);
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .card {
+            flex: 1 1 300px;
+            background-color: var(--bg-dark);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(122, 92, 255, 0.2);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .skill {
+            background-color: var(--bg-dark);
+            padding: 0.8rem 1.2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--accent-end);
+            color: var(--text-secondary);
+            transition: all 0.3s;
+            font-weight: 400;
+        }
+
+        .skill:hover {
+            background: linear-gradient(to right, var(--accent-start), var(--accent-end));
+            color: var(--bg-dark);
+        }
+
+        .project, .experience {
+            margin-bottom: 1rem;
+        }
+
+        .experience h4 {
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience p {
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience li {
+            margin-bottom: 0.3rem;
+        }
+
+        footer {
+            background-color: var(--bg-section);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 1rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+
+        .cv-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(to right, var(--accent-start), var(--accent-end));
+            color: var(--bg-dark);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .cv-link:hover {
+            box-shadow: 0 0 10px rgba(154, 134, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .section-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Emmanuel Tsana</h1>
+            <p>Étudiant en BTS SIO option SISR — Administration Réseau et Sécurité</p>
+            <nav>
+                <a href="#apropos">À propos</a>
+                <a href="#experiences">Expériences</a>
+                <a href="#parcours">Parcours</a>
+                <a href="#competences">Compétences</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="apropos">
+        <div class="container">
+            <h2>À propos de moi</h2>
+            <div class="section-content">
+                <div class="card">
+                    <p>
+                        Passionné par les technologies de l'information et les infrastructures réseau, je me spécialise actuellement dans l'<strong>administration réseau</strong> via ma formation en BTS SIO option SISR.
+                    </p>
+                    <p>
+                        Mon objectif professionnel est de devenir <strong>administrateur réseau</strong> ou <strong>ingénieur en cybersécurité</strong>, en poursuivant mes études jusqu'à un niveau Bac+5 (Master). Je souhaite acquérir une expertise solide pour concevoir, sécuriser et optimiser des réseaux informatiques au sein d'entreprises ou d'organisations.
+                    </p>
+                    <p>
+                        Rigoureux, autonome et motivé, je recherche activement des opportunités de stage ou d'alternance pour appliquer mes connaissances et développer mes compétences pratiques.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiences">
+        <div class="container">
+            <h2>Expérience professionnelle</h2>
+            <div class="section-content">
+                <div class="card">
+                    <div class="experience">
+                        <h3>Électricien (stagiaire)</h3>
+                        <h4>AFPA - Chartres (28)</h4>
+                        <p>2023 (8 semaines)</p>
+                        <ul>
+                            <li>Câblage et remplacement d'équipements sur une armoire électrique d'une machine industrielle.</li>
+                            <li>Programmation et mise en service d'un robot industriel.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="experience">
+                        <h3>Électricien (stagiaire)</h3>
+                        <h4>B2T Elec - Bagnolet (93)</h4>
+                        <p>2024 (4 semaines)</p>
+                        <ul>
+                            <li>Pose et raccordement de prises, interrupteurs et luminaires.</li>
+                            <li>Lecture de plans électriques pour le positionnement des équipements.</li>
+                            <li>Installation de câblage électrique dans les murs et plafonds.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="experience">
+                        <h3>Électricien (stagiaire)</h3>
+                        <h4>NELELEC - Pantin (93)</h4>
+                        <p>2024 (4 semaines)</p>
+                        <ul>
+                            <li>Participation à la rénovation complète des installations électriques d'un centre sportif.</li>
+                            <li>Pose et câblage d'éclairages neufs (luminaires, interrupteurs, etc.).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours">
+        <div class="container">
+            <h2>Parcours académique</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3>Seconde Générale</h3>
+                    <p><strong>2021 – 2022</strong></p>
+                    <p>Lycée Joseph Talma, Brunoy</p>
+                </div>
+                <div class="card">
+                    <h3>Première Professionnelle MELEC</h3>
+                    <p><strong>2022 – 2023</strong></p>
+                    <p>Lycée Jehan de Beauce, Chartres</p>
+                </div>
+                <div class="card">
+                    <h3>Terminale Professionnelle MELEC</h3>
+                    <p><strong>2023 – 2024</strong></p>
+                    <p>Lycée Paul Le Rolland, Drancy</p>
+                    <p><strong>Baccalauréat Professionnel MELEC — Mention Assez Bien</strong></p>
+                </div>
+                <div class="card">
+                    <h3>BTS SIO — Option SISR</h3>
+                    <p><strong>2024 – 2026</strong></p>
+                    <p>Lycée de Cachan, Cachan</p>
+                    <p>Redoublement de la première année</p>
+                    <p>Solutions d'Infrastructure, Systèmes et Réseaux : administration, maintenance et sécurisation des réseaux informatiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <div class="container">
+            <h2>Compétences techniques</h2>
+            <div class="skills-container">
+                <div class="skill">Administration Réseau</div>
+                <div class="skill">Sécurité Informatique</div>
+                <div class="skill">Cisco Packet Tracer</div>
+                <div class="skill">Linux (Debian)</div>
+                <div class="skill">Windows Server 2022</div>
+                <div class="skill">Virtualisation (VirtualBox)</div>
+                <div class="skill">PowerShell</div>
+                <div class="skill">Firewall et VPN</div>
+                <div class="skill">Diagnostic Réseau</div>
+                <div class="skill">Gestion des Stratégies de Groupe (GPO)</div>
+                <div class="skill">Python</div>
+                <div class="skill">MySQL</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets">
+        <div class="container">
+            <h2>Projets réalisés</h2>
+            <div class="section-content">
+                <div class="card">
+                    <div class="project">
+                        <h3>Réseau d'entreprise sécurisé</h3>
+                        <p>Conception et configuration d'un réseau local pour une PME, incluant la segmentation VLAN, le routage inter-VLAN et la mise en place de règles de sécurité de base.</p>
+                        <p><strong>Outils :</strong> Cisco Packet Tracer, Switches, Routeurs, VLAN, ACL.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3>Déploiement d'un Active Directory avec services DHCP et DNS</h3>
+                        <p>Conception et mise en place d'un contrôleur de domaine sous Windows Server 2022 pour centraliser la gestion des utilisateurs et des ressources réseau.</p>
+                        <p><strong>Outils :</strong> Windows Server 2022, Active Directory, DHCP, DNS.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3>Audit des postes informatiques pour la Région Île-de-France</h3>
+                        <p>Analyse des performances et de l'état des postes informatiques de la section SIO afin d'établir un rapport technique pour la Région Île-de-France.</p>
+                        <p><strong>Outils :</strong> Benchmarking, inventaire matériel, rédaction de rapport.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="section-content">
+                <div class="card">
+                    <p>Je suis ouvert à toute demande de stage ou d'alternance.</p>
+                    <p><strong>Email :</strong> <a href="mailto:emmanueltsana270@gmail.com" style="color: var(--accent-end); font-weight: 500;">emmanueltsana270@gmail.com</a></p>
+                    <p><strong>Téléphone :</strong> <a href="tel:+33771726886" style="color: var(--accent-end); font-weight: 500;">07 71 72 68 86</a></p>
+                    <a href="https://drive.google.com/file/d/1Q8xnKNL6F7LhTDaVUgLQ9ERe7LoYZmX7/view?usp=drive_link" class="cv-link" target="_blank">Télécharger mon CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Emmanuel Tsana. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
