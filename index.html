@@ -170,31 +170,6 @@
             color: var(--bg-dark);
         }
 
-        .project, .experience {
-            margin-bottom: 1rem;
-        }
-
-        .experience h4 {
-            color: var(--text-primary);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience p {
-            font-style: italic;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .experience li {
-            margin-bottom: 0.3rem;
-        }
-
         footer {
             background-color: var(--bg-section);
             text-align: center;
@@ -218,26 +193,6 @@
         .cv-link:hover {
             box-shadow: 0 0 10px rgba(154, 134, 255, 0.5);
         }
-
-        @media (max-width: 768px) {
-            .section-content {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card {
-                width: 100%;
-            }
-
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav a {
-                margin: 0.3rem 0;
-            }
-        }
     </style>
 </head>
 <body>
@@ -248,7 +203,8 @@
             <nav>
                 <a href="#apropos">À propos</a>
                 <a href="#experiences">Expériences</a>
-                <a href="#parcours">Parcours</a>
+                <a href="#parcours">Parcours scolaire</a>
+                <a href="#diplomes">Diplômes</a>
                 <a href="#competences">Compétences</a>
                 <a href="#projets">Projets</a>
                 <a href="#contact">Contact</a>
@@ -262,14 +218,11 @@
             <div class="section-content">
                 <div class="card">
                     <p>
-                        Passionné par les technologies de l'information et les infrastructures réseau, je me spécialise actuellement dans l'<strong>administration réseau</strong> via ma formation en BTS SIO option SISR.
+    Étudiant en BTS SIO option SISR, je m’intéresse aux systèmes et aux réseaux et je construis progressivement mes compétences dans ce domaine. J’apprécie comprendre comment une infrastructure est organisée, comment les services communiquent entre eux et comment assurer leur bon fonctionnement.
                     </p>
-                    <p>
-                        Mon objectif professionnel est de devenir <strong>administrateur réseau</strong> ou <strong>ingénieur en cybersécurité</strong>, en poursuivant mes études jusqu'à un niveau Bac+5 (Master). Je souhaite acquérir une expertise solide pour concevoir, sécuriser et optimiser des réseaux informatiques au sein d'entreprises ou d'organisations.
-                    </p>
-                    <p>
-                        Rigoureux, autonome et motivé, je recherche activement des opportunités de stage ou d'alternance pour appliquer mes connaissances et développer mes compétences pratiques.
-                    </p>
+		    <p>
+    Mon objectif est d’évoluer vers l’administration réseau, un domaine qui demande de la rigueur, de la logique et une bonne capacité d’analyse. Au fil de ma formation, j’ai développé un vrai intérêt pour la configuration des environnements serveurs, la gestion réseau et la sécurisation des systèmes.
+		    </p>
                 </div>
             </div>
         </div>
@@ -285,7 +238,7 @@
                         <h4>AFPA - Chartres (28)</h4>
                         <p>2023 (8 semaines)</p>
                         <ul>
-                            <li>Câblage et remplacement d'équipements sur une armoire électrique d'une machine industrielle.</li>
+                            <li>Câblage et remplacement d'équipements sur une armoire électrique industrielle.</li>
                             <li>Programmation et mise en service d'un robot industriel.</li>
                         </ul>
                     </div>
@@ -308,8 +261,8 @@
                         <h4>NELELEC - Pantin (93)</h4>
                         <p>2024 (4 semaines)</p>
                         <ul>
-                            <li>Participation à la rénovation complète des installations électriques d'un centre sportif.</li>
-                            <li>Pose et câblage d'éclairages neufs (luminaires, interrupteurs, etc.).</li>
+                            <li>Rénovation complète des installations électriques d'un centre sportif.</li>
+                            <li>Pose et câblage d'éclairages neufs.</li>
                         </ul>
                     </div>
                 </div>
@@ -319,7 +272,7 @@
 
     <section id="parcours">
         <div class="container">
-            <h2>Parcours académique</h2>
+            <h2>Parcours scolaire</h2>
             <div class="section-content">
                 <div class="card">
                     <h3>Seconde Générale</h3>
@@ -335,7 +288,6 @@
                     <h3>Terminale Professionnelle MELEC</h3>
                     <p><strong>2023 – 2024</strong></p>
                     <p>Lycée Paul Le Rolland, Drancy</p>
-                    <p><strong>Baccalauréat Professionnel MELEC — Mention Assez Bien</strong></p>
                 </div>
                 <div class="card">
                     <h3>BTS SIO — Option SISR</h3>
@@ -343,6 +295,24 @@
                     <p>Lycée de Cachan, Cachan</p>
                     <p>Redoublement de la première année</p>
                     <p>Solutions d'Infrastructure, Systèmes et Réseaux : administration, maintenance et sécurisation des réseaux informatiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diplomes">
+        <div class="container">
+            <h2>Diplômes et certifications</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3>Bac Professionnel MELEC</h3>
+                    <p><strong>2024</strong></p>
+                    <p>Mention Assez Bien — Lycée Paul Le Rolland, Drancy (93)</p>
+                </div>
+                <div class="card">
+                    <h3>Certification SST</h3>
+                    <p><strong>2024</strong></p>
+                    <p>Sauveteur Secouriste du Travail — Drancy (93)</p>
                 </div>
             </div>
         </div>
@@ -372,6 +342,7 @@
         <div class="container">
             <h2>Projets réalisés</h2>
             <div class="section-content">
+
                 <div class="card">
                     <div class="project">
                         <h3>Réseau d'entreprise sécurisé</h3>
@@ -379,20 +350,26 @@
                         <p><strong>Outils :</strong> Cisco Packet Tracer, Switches, Routeurs, VLAN, ACL.</p>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="project">
                         <h3>Déploiement d'un Active Directory avec services DHCP et DNS</h3>
-                        <p>Conception et mise en place d'un contrôleur de domaine sous Windows Server 2022 pour centraliser la gestion des utilisateurs et des ressources réseau.</p>
+                        <p>Installation et configuration d'un contrôleur de domaine sous Windows Server 2022 pour centraliser la gestion des utilisateurs.</p>
+                        <p>Configuration des services DHCP et DNS pour automatiser l’attribution des adresses IP et la résolution de noms.</p>
                         <p><strong>Outils :</strong> Windows Server 2022, Active Directory, DHCP, DNS.</p>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="project">
-                        <h3>Audit des postes informatiques pour la Région Île-de-France</h3>
-                        <p>Analyse des performances et de l'état des postes informatiques de la section SIO afin d'établir un rapport technique pour la Région Île-de-France.</p>
-                        <p><strong>Outils :</strong> Benchmarking, inventaire matériel, rédaction de rapport.</p>
+                        <h3>Déploiement de GLPI avec FusionInventory</h3>
+                        <p>Installation et configuration de GLPI sur Debian pour la gestion du parc informatique.</p>
+                        <p>Déploiement de l’agent FusionInventory pour automatiser l’inventaire matériel et logiciel.</p>
+                        <p>Configuration des plugins, des entités, des utilisateurs et des règles d’inventaire.</p>
+                        <p><strong>Outils :</strong> GLPI, FusionInventory, Debian, Apache2, MariaDB.</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -402,10 +379,10 @@
             <h2>Contact</h2>
             <div class="section-content">
                 <div class="card">
-                    <p>Je suis ouvert à toute demande de stage ou d'alternance.</p>
+                    <p>Je suis ouvert à toute demande professionnelle.</p>
                     <p><strong>Email :</strong> <a href="mailto:emmanueltsana270@gmail.com" style="color: var(--accent-end); font-weight: 500;">emmanueltsana270@gmail.com</a></p>
                     <p><strong>Téléphone :</strong> <a href="tel:+33771726886" style="color: var(--accent-end); font-weight: 500;">07 71 72 68 86</a></p>
-                    <a href="https://drive.google.com/file/d/1Q8xnKNL6F7LhTDaVUgLQ9ERe7LoYZmX7/view?usp=drive_link" class="cv-link" target="_blank">Télécharger mon CV</a>
+                    <a href="https://drive.google.com/file/d/17K877t81mGGOR3nzUSRiTnKswUyR12ho/view?usp=drive_link" class="cv-link" target="_blank">Télécharger mon CV</a>
                 </div>
             </div>
         </div>
